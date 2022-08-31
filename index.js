@@ -40,8 +40,8 @@ app.use((err, req, res, next) => {
     message,
   });
 });
-
-app.listen(8800, () => {
+const port = process.env.PORT || 4000; // PORT must be in caps
+app.listen(port, () => {
   connect();
   console.log("Connected to Server");
 });
